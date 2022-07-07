@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="=en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos - flex-shrink</title>
+            
+        <style>
+        
+        .flex-container {
+            display: flex;
+            border: 1px solid black ;
+            max-width: 350px;
+            margin-bottom: 10px;
+        }
+
+        .items {
+            margin: 5px;
+            background-color: red;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .s-0 {
+            flex-shrink: 0;
+            flex-basis: 200px;
+        }
+        .s-1 {
+            flex-shrink: 1;
+        }
+        
+        .s-2 {
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+        
+        .s-3 {
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+        
+        .fg-0 {
+            flex-grow: 0;
+        }
+        
+        .fg-1 {
+            flex-grow: 1;
+        }
+        </style>
+    </head>
+
+    <body>
+        <p>flex-shrink-1</p>
+        <div class="flex-container">
+            <div class="items s-1 fg-1">A</div>
+            <div class="items s-1 fg-1">B</div>
+            <div class="items s-1 fg-1">C</div>
+            <div class="items s-1 fg-1">D</div>
+            <div class="items s-1 fg-1">E</div>
+
+        </div>
+
+        <p>flex-shrink-1 quebras</p>
+        <div class="flex-container">
+            <div class="items s-1 fg-1">A</div>
+            <div class="items s-1 fg-1">asdfasgf asfasgasgadfgaB</div>
+            <div class="items s-1 fg-1">C</div>
+            <div class="items s-1 fg-1">D</div>
+           
+        </div>
+
+        <p>flex-shrink-0 com basis definido</p>
+        <div class="flex-container">
+            <div class="items s-0 fg-1">A</div>
+            <div class="items s-0 fg-1">asdfasgf asfasgasgadfgaB</div>
+            <div class="items s-0 fg-0">C</div>
+            <div class="items s-0 fg-0">D</div>
+         </div>
+
+            <p>flex-shrink diversificados e basis  </p>
+            <div class="flex-container">
+                <div class="items s-1 fg-1">A</div>
+                <div class="items s-2 fg-1">asdfasgf asfasgasgadfgaB</div>
+                <div class="items s-1 fg-1">C</div>
+                <div class="items s-3 fg-1">D</div>
+               
+            </div>
+        </div>
+    </body>
+
+</html>
